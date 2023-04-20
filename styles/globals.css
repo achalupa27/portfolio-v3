@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .hero-button {
+    @apply px-3 py-2 text-xs text-primary/60 underline-offset-8 transition duration-300 ease-in-out hover:text-primary hover:underline dark:uppercase dark:tracking-[4px] dark:text-amber-600/60 dark:hover:text-amber-600 md:px-6 md:text-sm;
+  }
+
+  .contact-input {
+    @apply rounded-t-md border-b border-primary  bg-white px-6 py-4 text-primary placeholder-primary/50 outline-none transition duration-500 focus:border-blue-600 focus:text-primary hover:border-primary/40 dark:rounded-none dark:border-amber-900/40 dark:bg-slate-400/10  dark:text-amber-600 dark:placeholder-amber-600/50 dark:focus:border-amber-600 dark:focus:bg-slate-400/20  dark:focus:text-amber-600  dark:hover:border-amber-600/40 dark:hover:bg-slate-400/20;
+  }
+
+  .gradient-gold {
+    @apply bg-gradient-to-br from-[#ea580c] via-[#f59e0b] to-[#d97706] bg-clip-text text-amber-600/40;
+  }
+
+  .hover-gradient-gold {
+    @apply hover:bg-gradient-to-br hover:from-[#f59e0b] hover:via-[#ea580c] hover:to-[#d97706];
+  }
+
+  .gradient-gold-small {
+    @apply bg-gradient-to-tr from-[#ea580c] via-[#f59e0b] to-[#ea580c] bg-clip-text text-amber-600/40;
+  }
+}

@@ -1,0 +1,66 @@
+.dark .mySwiper .swiper-pagination-bullet-active {
+  background: #f59e0b;
+}
+
+.dark .mySwiper .swiper-button-prev {
+  color: #f59e0b;
+}
+
+.dark .mySwiper .swiper-pagination {
+  position: relative;
+}
+
+.mySwiper .swiper-pagination {
+  position: relative;
+}
+
+.dark .mySwiper .swiper-button-prev:hover {
+  color: #d97706;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 400ms;
+}
+
+.dark .mySwiper .swiper-button-next {
+  color: #f59e0b;
+}
+
+.dark .mySwiper .swiper-button-next:hover {
+  color: #d97706;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 400ms;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  background: #60a5fa;
+}
+
+.mySwiper .swiper-button-prev {
+  color: #60a5fa;
+}
+
+.mySwiper .swiper-button-prev:hover {
+  color: #3b82f6;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 400ms;
+}
+
+.mySwiper .swiper-button-next {
+  color: #60a5fa;
+}
+
+.mySwiper .swiper-button-next:hover {
+  color: #3b82f6;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 400ms;
+}
+
+@media (max-width: 450px) {
+  .mySwiper .swiper-button-next,
+  .mySwiper .swiper-button-prev {
+    display: none;
+  }
+}

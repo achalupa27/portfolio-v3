@@ -1,0 +1,50 @@
+/* .path {
+  stroke-dasharray: 4000;
+  stroke-dashoffset: 100;
+  animation: dash 1.4s linear;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: -4000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+} */
+
+i {
+  line-height: 0;
+}
+
+.dark .personalCard {
+  fill: #111827;
+  stroke: rgb(217 119 60); /* Need to change this to gradient */
+}
+
+.dark .personalCardInit {
+  stroke: rgb(217 119 60);
+}
+
+.scene {
+  perspective: 600px;
+  transform-style: preserve-3d;
+}
+
+.card {
+  transform-style: preserve-3d;
+}
+
+.face {
+  position: absolute;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.is-flipped {
+  transform: rotateY(180deg);
+}
