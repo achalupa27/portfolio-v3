@@ -1,59 +1,66 @@
-import { motion } from "framer-motion";
+import Link from "next/link";
+import { AiFillGithub } from "react-icons/ai";
 import { urlFor } from "../sanity";
-import { Experience } from "../types";
+import { useState } from "react";
 
 type Props = {
-  experience: Experience;
+  experience: any;
 };
 
-function WorkCard({ experience }: Props) {
+const experienceCard = ({ experience }: Props) => {
+  const [isFlipped, setIsFlipped] = useState(false);
   return (
-    <div className="flex items-center justify-center p-12 py-20 md:p-44">
-      <article className="flex h-[420px] w-[300px] cursor-pointer flex-col items-center justify-center rounded-md border border-primary bg-white shadow-xl transition duration-500 hover:shadow-gray-900/20 dark:rounded-none dark:border-amber-600 dark:bg-gray-900 dark:hover:bg-[#111827] dark:hover:shadow-amber-700/20 sm:w-[420px] md:w-[700px] xl:h-[550px] xl:w-[1000px]">
-        <h4 className="pb-8 text-center text-2xl font-extralight text-primary dark:uppercase dark:tracking-[8px] dark:text-amber-600 sm:text-3xl md:text-4xl">
-          {experience?.jobTitle}
-        </h4>
+    <div className="scene flex items-center justify-center p-2 py-6 xl:p-6">
+      {/* CARD */}
+      <div
+        className={`flex h-[420px] w-[300px] cursor-pointer flex-col items-center justify-center rounded-md  bg-white text-center text-2xl font-extralight text-primary shadow-xl transition duration-500 hover:shadow-gray-900/20 dark:rounded-none dark:border dark:border-primary-dark dark:bg-gray-900 dark:uppercase dark:tracking-[8px] dark:text-primary-dark dark:hover:bg-[#111827] dark:hover:shadow-amber-700/20 sm:w-[420px] sm:text-3xl md:w-[700px] xl:h-[420px] ${
+          isFlipped ? "is-flipped" : ""
+        }`}
+        onClick={() => setIsFlipped(!isFlipped)}
+      >
+        {/* FRONT CARD */}
+        <div className={`face ${isFlipped ? "z-0" : "z-50"} `}>
+          <div className="mb-8 flex justify-center">
+            <img
+              className="h-24 w-32 xl:h-36 xl:w-44"
+              src={urlFor(experience?.companyImage).url()}
+              alt={`${experience?.title} logo`}
+            />
+          </div>
+          <div className="text-2xl">Software Engineer</div>
+        </div>
 
-        <div className="p-5">
+        <h4
+          className={
+            "face back absolute -top-4 rounded-md border-primary bg-secondary text-2xl font-extralight lowercase text-primary shadow dark:rounded-none dark:border dark:border-primary-dark dark:bg-secondary-dark dark:uppercase dark:tracking-[8px] dark:text-primary-dark"
+          }
+        >
           <img
-            className="h-24 w-auto md:h-36"
+            className="h-12 w-12"
             src={urlFor(experience?.companyImage).url()}
-            alt={`${experience?.jobTitle} logo`}
+            alt={`${experience?.title} logo`}
           />
+        </h4>
+        {/* BACK CARD */}
+        <div className="face back flex flex-col items-center justify-center">
+          <div className="flex flex-wrap items-center justify-center gap-2 pt-4">
+            {experience?.technologies?.map((technology: any) => (
+              <div
+                key={technology._id}
+                className="z-50 cursor-default rounded-md border-primary p-1 shadow-md transition duration-200 hover:bg-blue-400/20 dark:rounded-none dark:border dark:border-amber-500 dark:hover:bg-amber-500/20 sm:p-2"
+                onClick={() => console.log("dont flip")}
+              >
+                <img
+                  className="h-6 w-6 md:h-8 md:w-8 xl:h-10 xl:w-10"
+                  src={urlFor(technology.image).url()}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-
-        <div className="flex items-center justify-center space-x-2 pt-8">
-          {experience.technologies.map((technology) => (
-            <div
-              key={technology._id}
-              className="rounded-md border border-primary p-1 dark:rounded-none dark:border-amber-500 sm:p-2"
-            >
-              <img
-                className="h-6 w-6 lg:h-10 lg:w-10"
-                src={urlFor(technology.image).url()}
-              />
-            </div>
-          ))}
-        </div>
-
-        <div>
-          {/* <p className="py-2 text-sm font-light text-blue-500 dark:uppercase dark:text-amber-600 md:text-base">
-          Dec 2022 -{" "}
-          {experience.isCurrentlyWorkingHere
-            ? "Present"
-            : new Date(experience.dateEnded).toDateString()}
-        </p> */}
-          {/* <ul className='space-y-4 ml-5 text-lg text-gray-800 dark:text-gray-200 h-80 overflow-y-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#0084ff]/80'>
-                    {experience.points.map((point, i) => (
-                        <li className='text-center' key={i}>
-                            {point}
-                        </li>
-                    ))}
-                </ul> */}
-        </div>
-      </article>
+      </div>
     </div>
   );
-}
+};
 
-export default WorkCard;
+export default experienceCard;

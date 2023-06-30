@@ -47,7 +47,9 @@ function Websites({ projects }: Props) {
         </div>
         <div className="hidden lg:flex">
           {projects?.map((project) =>
-            project.isShowcase ? <ProjectCard project={project} /> : null
+            project.isShowcase ? (
+              <ProjectCard project={project} key={project._id} />
+            ) : null
           )}
         </div>
       </div>

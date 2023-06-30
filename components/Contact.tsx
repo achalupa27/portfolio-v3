@@ -66,7 +66,7 @@ function Contact() {
         />
         <button
           type="submit"
-          className={`flex items-center justify-evenly rounded-md border border-primary bg-white py-4 px-10 text-primary transition duration-500 ease-in-out dark:rounded-none  dark:border-amber-600 dark:bg-slate-400/10 dark:text-amber-600 ${
+          className={`flex items-center justify-evenly rounded-md border-primary bg-white py-4 px-10 text-primary shadow transition duration-500 ease-in-out dark:rounded-none  dark:border-amber-600 dark:bg-slate-400/10 dark:text-amber-600 ${
             isSent
               ? "cursor-not-allowed"
               : "hover:bg-primary hover:text-sky-50 dark:hover:bg-amber-600 dark:hover:text-gray-900"

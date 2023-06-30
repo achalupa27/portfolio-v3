@@ -72,7 +72,7 @@ function SkillCases({ skill, show, close }: Props) {
             <div className="font-light text-primary dark:tracking-[3px] dark:text-primary-dark">
               Work
             </div>
-            <div className="flex flex-col items-center justify-center text-center tracking-[3px] text-gray-800 dark:text-gray-200">
+            <div className="flex flex-col items-center justify-center text-center text-gray-800 dark:tracking-[3px] dark:text-gray-200">
               {skill?.usedWork?.map((work) => (
                 <span>{work}</span>
               ))}

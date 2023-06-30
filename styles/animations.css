@@ -19,11 +19,7 @@ i {
 
 .dark .personalCard {
   fill: #111827;
-  stroke: rgb(217 119 60); /* Need to change this to gradient */
-}
-
-.dark .personalCardInit {
-  stroke: rgb(217 119 60);
+  stroke: #d9773c; /* Need to change this to gradient */
 }
 
 .scene {

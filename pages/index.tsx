@@ -15,7 +15,7 @@ import { ThemeProvider } from "next-themes";
 import ScrollToTop from "../components/ScrollToTop";
 import Github from "../components/Github";
 import MoreSkills from "../components/MoreSkills";
-import ComingSoon from "../components/ComingSoon";
+import LightSuite from "../components/LightSuite";
 
 type Props = {
   experiences: Experience[];
@@ -25,18 +25,18 @@ type Props = {
 
 const Home = ({ experiences, projects, skills }: Props) => {
   return (
-    <ThemeProvider enableSystem={false} attribute="class">
+    <ThemeProvider enableSystem={false} attribute="class" defaultTheme="dark">
       <Head>
         <title>Andrew Chalupa - Portfolio</title>
       </Head>
-      <div className="dark:gradient-to-br to-teal-gray/60 z-0 h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth bg-gradient-to-br from-gray-300 via-gray-100 to-gray-300 lowercase text-white overflow-x-hidden scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-primary dark:from-gray-900 dark:to-gray-800 dark:uppercase dark:scrollbar-thumb-amber-600/80 ">
+      <div className="dark:gradient-to-br to-teal-gray/60 z-0 h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth bg-gray-200 bg-gradient-to-br lowercase text-white overflow-x-hidden scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-primary dark:from-gray-900 dark:to-gray-800 dark:uppercase dark:scrollbar-thumb-amber-600/80 ">
         <Header />
 
         <section id="hero" className="snap-start">
           <Hero />
         </section>
 
-        <section id="experience" className="snap-center">
+        <section id="work" className="snap-center">
           <Work experiences={experiences} />
         </section>
 
@@ -44,9 +44,9 @@ const Home = ({ experiences, projects, skills }: Props) => {
           <Websites projects={projects} />
         </section>
 
-        <section id="lightsuite" className="snap-center">
-          <ComingSoon projects={projects} />
-        </section>
+        {/* <section id="lightsuite" className="snap-center">
+          <LightSuite projects={projects} />
+        </section> */}
 
         <section id="wisdom" className="snap-center">
           <Skills skills={skills} />
@@ -54,10 +54,6 @@ const Home = ({ experiences, projects, skills }: Props) => {
 
         <section id="contact" className="snap-center">
           <Contact />
-        </section>
-
-        <section id="github" className="snap-center">
-          <Github projects={projects} />
         </section>
 
         <section id="more" className="snap-center">

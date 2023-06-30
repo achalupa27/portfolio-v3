@@ -24,13 +24,13 @@ function PersonalCardDark({}: Props) {
   });
 
   return (
-    <div className="relative cursor-pointer shadow-xl transition duration-500 hover:shadow-gray-900/20 dark:hover:shadow-amber-700/20">
+    <div className="relative cursor-pointer shadow-xl transition duration-500 dark:hover:shadow-amber-700/20">
       <motion.svg
         viewBox="0 0 670 335"
         xmlns="http://www.w3.org/2000/svg"
         className="w-[350px] sm:w-[450px] md:h-[333px] md:w-[670px]"
       >
-        <defs>
+        {/* <defs>
           <linearGradient
             id="border-gradient"
             x1="0%"
@@ -42,16 +42,11 @@ function PersonalCardDark({}: Props) {
             <stop offset="50%" stopColor="#ea580c" />
             <stop offset="100%" stopColor="#d97706" />
           </linearGradient>
-        </defs>
+        </defs> */}
         <motion.rect
-          className="personalCardInit"
-          x="0.5"
-          y="0.5"
-          // rx="24"
-          // ry="24"
           width="669"
           height="333.5"
-          stroke="#60a5fa"
+          stroke="#d9773c"
           strokeWidth="1"
           shapeRendering="crispEdges"
           vectorEffect="non-scaling-stroke"
@@ -61,17 +56,10 @@ function PersonalCardDark({}: Props) {
           animate="visible"
         />
         <motion.rect
-          className="personalCard"
-          x="0.5"
-          y="0.5"
-          // rx="24"
-          // ry="24"
           width="669"
           height="333.5"
-          stroke="#60a5fa"
-          // stroke="url(#border-gradient)"
-          strokeWidth="1"
-          fill="white"
+          stroke="#d9773c"
+          fill="#111827"
           shapeRendering="crispEdges"
           vectorEffect="non-scaling-stroke"
           initial={{ opacity: 0 }}
@@ -79,6 +67,7 @@ function PersonalCardDark({}: Props) {
           transition={{ delay: 1.4, duration: 1 }}
         />
       </motion.svg>
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

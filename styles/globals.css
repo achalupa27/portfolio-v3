@@ -8,7 +8,7 @@
   }
 
   .contact-input {
-    @apply rounded-t-md border-b border-primary  bg-white px-6 py-4 text-primary placeholder-primary/50 outline-none transition duration-500 focus:border-blue-600 focus:text-primary hover:border-primary/40 dark:rounded-none dark:border-amber-900/40 dark:bg-slate-400/10  dark:text-amber-600 dark:placeholder-amber-600/50 dark:focus:border-amber-600 dark:focus:bg-slate-400/20  dark:focus:text-amber-600  dark:hover:border-amber-600/40 dark:hover:bg-slate-400/20;
+    @apply rounded-md  bg-white px-6 py-4 text-primary placeholder-primary/50 outline-none transition duration-500 focus:border-blue-600 focus:text-primary hover:border-primary/40 dark:rounded-none dark:border-amber-900/40 dark:bg-slate-400/10  dark:text-amber-600 dark:placeholder-amber-600/50 dark:focus:border-amber-600 dark:focus:bg-slate-400/20  dark:focus:text-amber-600  dark:hover:border-amber-600/40 dark:hover:bg-slate-400/20;
   }
 
   .gradient-gold {
