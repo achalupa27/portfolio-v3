@@ -1,4 +1,3 @@
-import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 
 type Props = {};
@@ -18,13 +17,8 @@ function PersonalCardDark({}: Props) {
     },
   };
 
-  const [text, count] = useTypewriter({
-    words: ["Full Stack Developer.", "UX Designer.", "Andrew Chalupa"],
-    delaySpeed: 1000,
-  });
-
   return (
-    <div className="relative cursor-pointer shadow-xl transition duration-500 dark:hover:shadow-amber-700/20">
+    <div className="relative shadow-xl transition duration-500 dark:hover:shadow-amber-700/20">
       <motion.svg
         viewBox="0 0 670 335"
         xmlns="http://www.w3.org/2000/svg"

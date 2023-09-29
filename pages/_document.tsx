@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
@@ -19,7 +18,7 @@ export default function Document() {
           rel="stylesheet"
           href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
         />
-        <link rel="icon" href="/ct_logo_tab.png" />
+        <link rel="icon" href="/logo.png" />
       </Head>
       <body>
         <Main />

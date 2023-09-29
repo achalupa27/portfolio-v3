@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import PersonalCard from "./PersonalCard";
-import ScrollToTop from "./ScrollToTop";
+import ScrollToTop from "../ScrollToTop";
 import PersonalCardDark from "./PersonalCardDark";
 
 function Hero() {
@@ -23,19 +23,19 @@ function Hero() {
       >
         <Link href="#work">
           <button className="hero-button">
-            <span className="dark:gradient-gold-small text-primary">w</span>
+            <span className="dark:gradient-gold-small text-primary">W</span>
             <span>ork</span>
           </button>
         </Link>
         <Link href="#websites">
           <button className="hero-button">
-            <span className="dark:gradient-gold-small text-primary">w</span>
+            <span className="dark:gradient-gold-small text-primary">W</span>
             <span>ebsites</span>
           </button>
         </Link>
         <Link href="#wisdom">
           <button className="hero-button">
-            <span className="dark:gradient-gold-small text-primary">w</span>
+            <span className="dark:gradient-gold-small text-primary">W</span>
             <span>isdom</span>
           </button>
         </Link>

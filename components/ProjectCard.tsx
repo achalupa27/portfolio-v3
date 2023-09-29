@@ -13,7 +13,7 @@ const ProjectCard = ({ project }: Props) => {
     <div className="scene flex items-center justify-center p-2 py-6 xl:p-6">
       {/* CARD */}
       <div
-        className={`card relative z-40 flex h-[200px] w-[350px] cursor-pointer flex-col items-center justify-center rounded-md border-primary bg-white p-4 shadow-lg transition duration-500 hover:shadow-gray-900/20 dark:rounded-none dark:border dark:border-primary-dark  dark:bg-gray-900  dark:hover:bg-[#111827] dark:hover:shadow-amber-700/20 sm:h-[200px] sm:w-[400px] md:h-[200px] md:w-[400px] md:p-12 lg:h-[200px] lg:w-[320px] xl:h-[250px] xl:w-[380px] 2xl:h-[265px] 2xl:w-[440px] ${
+        className={`card relative z-40 flex h-[200px] w-[350px] cursor-pointer flex-col items-center justify-center rounded-md border-primary bg-white p-4 shadow-xl transition duration-500 hover:shadow-gray-900/20 dark:rounded-none dark:border dark:border-primary-dark  dark:bg-gray-900  dark:hover:bg-[#111827] dark:hover:shadow-amber-700/20 sm:h-[200px] sm:w-[400px] md:h-[200px] md:w-[400px] md:p-12 lg:h-[200px] lg:w-[320px] xl:h-[250px] xl:w-[380px] 2xl:h-[265px] 2xl:w-[440px] ${
           isFlipped ? "is-flipped" : ""
         }`}
         onClick={() => setIsFlipped(!isFlipped)}

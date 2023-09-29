@@ -12,12 +12,15 @@ type Props = {
 function Skill({ skill, setShow, setShowSkill }: Props) {
   return (
     <div
-      className="group relative flex cursor-pointer "
+      className="group relative flex cursor-pointer"
       onClick={() => {
         setShow(true);
         setShowSkill(skill);
       }}
     >
+      <div className="absolute bottom-[100%] z-50 hidden w-auto rounded-md border bg-white px-2 py-1 text-center text-primary group-hover:block dark:rounded-none dark:border-amber-500 dark:bg-gray-900 dark:text-amber-500">
+        {skill.title}
+      </div>
       <div className="flex h-12 w-12 items-center justify-center rounded-md p-2 dark:rounded-none dark:border-amber-500/80 dark:bg-gray-900 md:h-20 md:w-20 xl:h-20 xl:w-20">
         <img
           className="object-cover filter"

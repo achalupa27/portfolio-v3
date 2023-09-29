@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { AiOutlineSend, AiOutlineCheck } from "react-icons/ai";
+import { useTypewriter } from "react-simple-typewriter";
 
 type Inputs = {
   email: string;
@@ -37,8 +38,17 @@ function Contact() {
       });
   };
 
+  const [text, count] = useTypewriter({
+    words: ["Interested?", "Let's Talk."],
+    delaySpeed: 1000,
+    loop: 1,
+  });
+
   return (
     <div className="relative mx-auto flex h-screen max-w-7xl flex-col items-center justify-evenly">
+      <h3 className="absolute top-24 text-2xl font-light text-primary dark:uppercase dark:tracking-[20px] dark:text-amber-600">
+        Contact
+      </h3>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="mx-auto flex w-[350px] flex-col space-y-2  sm:w-[450px] md:w-[550px] lg:w-[700px]"

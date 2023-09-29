@@ -1,10 +1,10 @@
 import type { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import Contact from "../components/Contact";
+import Contact from "../components/Contact/Contact";
 import Work from "../components/Work";
 import Header from "../components/Header";
-import Hero from "../components/Hero";
+import Hero from "../components/Landing/Hero";
 import Websites from "../components/Websites";
 import Skills from "../components/Wisdom";
 import { Skill, Project, Experience } from "../types";

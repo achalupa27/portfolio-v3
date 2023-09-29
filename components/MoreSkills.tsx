@@ -25,7 +25,10 @@ function MoreSkills({ skills }: Props) {
         </h3>
         <div className="mt-4 grid max-h-[420px] grid-cols-1 gap-x-12 gap-y-8 overflow-y-auto py-3 lg:max-h-full ">
           {skillCategories.map((category) => (
-            <div className="rounded border-primary bg-white p-2 shadow dark:rounded-none dark:border dark:border-primary-dark dark:bg-secondary-dark">
+            <div
+              key={category}
+              className="rounded border-primary bg-white p-2 shadow dark:rounded-none dark:border dark:border-primary-dark dark:bg-secondary-dark"
+            >
               <span className="relative -top-5 rounded bg-white px-2 text-primary shadow dark:rounded-none dark:border dark:border-primary-dark dark:bg-secondary-dark dark:tracking-widest dark:text-primary-dark">
                 {category}
               </span>

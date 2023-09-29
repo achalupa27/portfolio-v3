@@ -19,14 +19,14 @@ function SkillCases({ skill, show, close }: Props) {
       onClick={close}
     >
       <div
-        className="relative z-50 h-auto w-[60rem] space-y-7 rounded-lg border border-primary bg-white p-12 shadow-2xl dark:rounded-none dark:border-amber-600 dark:bg-gray-900"
+        className="relative z-50 h-auto w-[60rem] space-y-7 rounded-lg bg-white p-12 shadow-2xl dark:rounded-none dark:border dark:border-amber-600 dark:bg-gray-900"
         onClick={() => {}}
       >
         <div className="flex flex-col items-center justify-center">
           <div className="font-light text-primary dark:tracking-[3px] dark:text-primary-dark">
             {skill.level} - {skill.progress}%
           </div>
-          <div className="absolute -top-4 rounded-md border border-primary bg-secondary pl-4 pr-4 text-2xl font-extralight lowercase text-primary dark:rounded-none dark:border-primary-dark dark:bg-secondary-dark dark:pl-6 dark:uppercase dark:tracking-[8px] dark:text-primary-dark">
+          <div className="absolute -top-4 rounded-md bg-secondary pl-4 pr-4 text-2xl font-extralight lowercase text-primary shadow-md dark:rounded-none dark:border dark:border-primary-dark dark:bg-secondary-dark dark:pl-6 dark:uppercase dark:tracking-[8px] dark:text-primary-dark">
             {skill.title}
           </div>
         </div>
